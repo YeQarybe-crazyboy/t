@@ -6,6 +6,10 @@ from json import load, dump
 from string import ascii_letters, digits
 from threading import Thread
 
+for i in ['one', 'two', 'three', 'four']:
+    with open(i+'.json', 'w') as n:
+        dump({'count': 0}, n)
+
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 class BypassCaptcha:
